@@ -5,6 +5,7 @@ import Tasks from './Components/Tasks.js';
 import AddTask from './Components/AddTask.js';
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -49,8 +50,12 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
-      <AddTask onAdd={addTask} />
+      <Header
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
+      />
+      {/* This is a way to conditionally render without a ternary. If the expression resolves to true then it renders the component otherwise nothing happens.  */}
+      {showAddTask && <AddTask onAdd={addTask} />}
       <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
     </div>
   );
