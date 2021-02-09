@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import Header from './Components/Header.js';
 import Tasks from './Components/Tasks.js';
+import AddTask from './Components/AddTask.js';
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -25,6 +26,13 @@ function App() {
     },
   ]);
 
+  // Add Task
+  const addTask = (task) => {
+    //creating an ID since there is no back-end to create unique ID's
+    const id = Math.floor(Math.random() * 10000 + 1);
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
+  };
   // Delete Task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
@@ -42,6 +50,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <AddTask onAdd={addTask} />
       <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
     </div>
   );
