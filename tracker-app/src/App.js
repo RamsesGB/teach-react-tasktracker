@@ -54,7 +54,8 @@ function App() {
         onAdd={() => setShowAddTask(!showAddTask)}
         showAdd={showAddTask}
       />
-      {/* This is a way to conditionally render without a ternary. If the expression resolves to true then it renders the component otherwise nothing happens.  */}
+      {/* This is a way to conditionally render without a ternary. If the expression resolves to true then it renders the component otherwise nothing happens.
+       It works because in JavaScript, true && expression always evaluates to expression, and false && expression always evaluates to false.  */}
       {showAddTask && <AddTask onAdd={addTask} />}
       <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
     </div>
