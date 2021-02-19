@@ -8,9 +8,9 @@
     },
     {
       "id": 2,
-      "text": "Gym",
-      "day": "Feb 9th @ 6:00AM",
-      "reminder": false
+      "text": "Mo money",
+      "day": "Feb 18th @ 7:50AM",
+      "reminder": true
     },
     {
       "id": 3,
