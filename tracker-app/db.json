@@ -7,16 +7,10 @@
       "reminder": true
     },
     {
-      "id": 2,
-      "text": "Mo money",
-      "day": "Feb 18th @ 7:50AM",
-      "reminder": true
-    },
-    {
-      "id": 3,
-      "text": "Meditate",
-      "day": "Feb 6th @ 9:00AM",
-      "reminder": true
+      "text": "Learn Code",
+      "day": "ALL DAY",
+      "reminder": true,
+      "id": 2
     }
   ]
 }
