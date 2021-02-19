@@ -1,19 +1,16 @@
 {
-  "posts": [
+  "tasks": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "text": "Morning Pages",
+      "day": "Feb 8th @ 7:00AM",
+      "reminder": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "text": "Learn Code",
+      "day": "ALL DAY",
+      "reminder": true,
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
